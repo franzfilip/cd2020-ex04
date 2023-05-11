@@ -1,4 +1,4 @@
-FROM golang:1.11-alpine
+FROM golang:1.20-alpine
 
 # Set maintainer label: maintainer=[YOUR-EMAIL]
 LABEL maintainer="[s2210455001@fhooe.at]"
@@ -10,7 +10,7 @@ WORKDIR /src
 COPY *.go go.* ./
 
 # List items in the working directory (ls)
-RUN ls
+RUN ls -al
 
 # Execute mod init
 # RUN go mod init ex04
